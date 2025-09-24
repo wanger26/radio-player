@@ -41,11 +41,10 @@ def stop_vlc(clear_station=True):
 def play_station(url):
     stop_vlc(clear_station=True)
     global vlc_process, current_volume, current_station
-    # Find station name
     name = next((s["name"] for s in RADIO_STATIONS if s["url"] == url), None)
     with vlc_lock:
         vlc_process = subprocess.Popen([
-            "cvlc", url, "--no-video", "--quiet", f"--volume={volume_to_vlc(current_volume)}"
+            "cvlc", url, "--no-video", "--quiet", "--aout=pulse"
         ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         current_station = {"name": name, "url": url}
 
