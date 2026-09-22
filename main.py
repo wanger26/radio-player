@@ -9,9 +9,9 @@ app = Flask(__name__)
 # List of radio stations (name and stream URL)
 RADIO_STATIONS = [
     {"name": "Hitradio Ö3", "url": "http://orf-live.ors-shoutcast.at/oe3-q2a"},
+    {"name": "Radio Salzburg", "url": "https://orf-live-sbg.mdn.ors.at/out/u/sbg/qxa/manifest.m3u8"},
     {"name": "Antenna Bayern", "url": "https://s7-webradio.antenne.de/antenne/stream/mp3"},
     {"name": "NPR", "url": "https://npr-ice.streamguys1.com/live.mp3"},
-    {"name": "Classic FM", "url": "http://media-ice.musicradio.com/ClassicFMMP3"},
     {"name": "Radio Swiss Pop", "url": "http://stream.srg-ssr.ch/m/rsj/mp3_128"}
 ]
 
